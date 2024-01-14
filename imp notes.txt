@@ -1,0 +1,50 @@
+Middle ware is the code that runs during the request and response..
+That means it runs before the completion of router request
+middle ware can be used for authentication by matching tokens
+One should import NextResponse from next/server
+
+to get the redirect method
+then 
+return NextResponse.redirect(new URL("/name",request.url))
+
+
+If we want that some page culd not be  accessewd then we could use config there
+
+
+it should be writen like
+
+export const config={
+
+matcher:"/name,one can add more here"
+
+}
+but the pages inside inside the given name can be accessed . So for that one should use 
+
+
+matcher:"/name/:path*"
+
+//////////////////////////////////////////////////////////////////////
+
+rendering 
+?What is rendering
+
+It is to convert our code into HTML code or get The uI part
+
+there aere two types of rendering
+Client side
+and server side
+
+In client side rendering,the html code is converted in browser
+
+
+Pre rendring has 2 types: static generation
+
+In this rendering te html is already made and can be used at any time
+
+
+server-sde rendering
+In this rendering,once the user sends request then the thtml code is made then a response is given to the client. 
+
+
+
+
